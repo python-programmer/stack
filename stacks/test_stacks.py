@@ -29,7 +29,7 @@ def dynamic_data():
     return random.randint(1, 1000)
 
 
-# test adding an item to the stack
+# testing add an item to the stack
 
 def test_add_a_none_element_to_stack(stack: Stack, none_data):
     # Act, Assert
@@ -46,7 +46,7 @@ def test_add_an_zero_value_to_stack(stack: Stack):
     assert stack.push(0) == 0
 
 
-# test getting length of the stack
+# testing get length of the stack
 
 def test_get_length_of_a_empty_stack(stack: Stack):
     # Act, Assert
@@ -65,7 +65,7 @@ def test_get_length_of_a_non_empty_stack(stack: Stack, dynamic_data, static_data
     assert length == 2
 
 
-# test poping from the stack
+# testing pop an item from the stack
 
 def test_pop_from_empty_stack(stack: Stack):
     # Act, Assert
@@ -87,7 +87,7 @@ def test_pop_from_stack(stack: Stack, dynamic_data, static_data):
     assert data == static_data
 
 
-# test peeking from the stack
+# testing peek an item from the stack
 
 def test_peek_from_empty_stack(stack: Stack):
     # Act, Assert
@@ -107,3 +107,24 @@ def test_peek_from_stack(stack: Stack, dynamic_data, static_data):
     # Assert
     assert length == 2
     assert data == static_data
+
+
+# testing empty stack
+
+def test_check_empty_stack(stack: Stack):
+    # Act, Assert
+    assert stack.empty()
+
+
+def test_check_none_empty_stack(stack: Stack, dynamic_data, static_data):
+     # Arrange
+    stack.push(dynamic_data)
+    stack.push(static_data)
+
+    # Act
+    is_empty = stack.empty()
+    length = stack.size()
+
+    # Assert
+    assert length == 2
+    assert is_empty == False
