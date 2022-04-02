@@ -1,0 +1,1 @@
+NULL_ELEMENT_EXCEPTION = 'Value cannot be null'
