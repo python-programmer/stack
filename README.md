@@ -45,3 +45,23 @@ from base.exceptions import NullElementException, EmptyStackException
 and also I used a package for stack functionalities, Its name is `stacks`,
 
 and a test file in the stacks package for stacks functionalities tests, Its name is `test_stacks.py`
+
+
+## How to use it
+
+if you want to use it, just import it
+
+```
+from stacks.stack import Stack
+
+...
+
+
+stack = Stack()
+
+stack.push()
+stack.pop()
+stack.peek()
+stack.empty()
+stack.size()
+```
