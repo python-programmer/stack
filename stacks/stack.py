@@ -21,3 +21,9 @@ class Stack:
 
         return self.data.pop()
 
+    def peek(self):
+        if self.size() == 0:
+            raise EmptyStackException(messages.EMPTY_STACK_EXCEPTION)
+
+        return self.data[-1]
+

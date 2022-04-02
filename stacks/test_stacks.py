@@ -85,3 +85,25 @@ def test_pop_from_stack(stack: Stack, dynamic_data, static_data):
     # Assert
     assert length == 1
     assert data == static_data
+
+
+# test peeking from the stack
+
+def test_peek_from_empty_stack(stack: Stack):
+    # Act, Assert
+    with pytest.raises(EmptyStackException):
+        stack.pop()
+
+
+def test_peek_from_stack(stack: Stack, dynamic_data, static_data):
+     # Arrange
+    stack.push(dynamic_data)
+    stack.push(static_data)
+
+    # Act
+    data = stack.peek()
+    length = stack.size()
+
+    # Assert
+    assert length == 2
+    assert data == static_data
