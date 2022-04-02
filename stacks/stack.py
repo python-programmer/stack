@@ -1,4 +1,4 @@
-from base.exceptions import NullElementException
+from base.exceptions import NullElementException, EmptyStackException
 from stacks import messages
 
 class Stack:
@@ -14,3 +14,10 @@ class Stack:
         
         self.data.append(element)
         return element
+
+    def pop(self):
+        if self.size() == 0:
+            raise EmptyStackException(messages.EMPTY_STACK_EXCEPTION)
+
+        return self.data.pop()
+
