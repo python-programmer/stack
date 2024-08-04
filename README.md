@@ -1,4 +1,4 @@
-# stack-y42
+# stack
 A stack data structure functionality in python.
 In this project, I used pytest for testing the stack functionality.
 
@@ -14,7 +14,7 @@ In this project, I used pytest for testing the stack functionality.
 Create a new virtualenv:
 
 ```
-$ cd stack-y42/
+$ cd stack/
 $ python3 -m venv venv
 ```
 
